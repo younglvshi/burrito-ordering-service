@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "04847f1b-bb5d-4e20-a1e1-69da8a76b8bd",
+		"name": "Burrito_Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Place order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tortilla\":\"flour\",\n    \"protein\":\"chicken\",\n    \"vegetable_1\":\"cabbage\",\n    \"vegetable_2\":\"\",\n    \"vegetable_3\":\"\",\n    \"salsa\":\"medim\",\n    \"extra\":\"avocado\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve existing order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/orders/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"orders",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve no-existing order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/orders/102",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"orders",
+						"102"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
